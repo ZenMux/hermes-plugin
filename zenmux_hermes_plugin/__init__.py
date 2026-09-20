@@ -347,6 +347,7 @@ def build_profile(config_path: Path = _CONFIG_PATH) -> ProviderProfile:
         scopes=_SCOPES,
         redirect_port=0,
         redirect_path="/callback",
+        timeout_seconds=600,
         label="ZenMux",
     )
     return ZenMuxProfile(
