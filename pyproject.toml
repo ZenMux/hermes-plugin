@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=77,<81"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zenmux-hermes-plugin"
+version = "0.1.0"
+description = "ZenMux OAuth model-provider plugin for Hermes Agent"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+  { name = "ZenMux" },
+]
+keywords = ["hermes-agent", "oauth", "pkce", "zenmux"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://zenmux.ai"
+Repository = "https://github.com/ZenMux/hermes-plugin"
+Issues = "https://github.com/ZenMux/hermes-plugin/issues"
+
+[project.entry-points."hermes_agent.plugins"]
+zenmux = "zenmux_hermes_plugin:register"
+
+[tool.setuptools]
+packages = ["zenmux_hermes_plugin"]
+
+[tool.setuptools.package-data]
+zenmux_hermes_plugin = ["zenmux.json"]

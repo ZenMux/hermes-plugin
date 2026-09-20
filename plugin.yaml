@@ -1,0 +1,11 @@
+name: zenmux
+kind: model-provider
+version: 0.1.0
+description: ZenMux OAuth provider for Hermes Agent
+author: ZenMux
+homepage: https://zenmux.ai
+license: MIT
+tags:
+  - model-provider
+  - oauth
+  - pkce
