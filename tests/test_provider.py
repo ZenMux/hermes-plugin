@@ -23,6 +23,8 @@ def test_profile_uses_hermes_declarative_oauth_hooks(tmp_path):
     assert callable(profile.auth_handler)
     assert callable(profile.refresh_credential)
     assert profile.fallback_models
+    if hasattr(profile, "model_listing_authoritative"):
+        assert profile.model_listing_authoritative is False
 
 
 def test_missing_client_id_does_not_break_provider_discovery(tmp_path):

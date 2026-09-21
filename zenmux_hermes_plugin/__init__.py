@@ -350,6 +350,9 @@ def build_profile(config_path: Path = _CONFIG_PATH) -> ProviderProfile:
         timeout_seconds=600,
         label="ZenMux",
     )
+    profile_options: dict[str, Any] = {}
+    if "model_listing_authoritative" in ProviderProfile.__dataclass_fields__:
+        profile_options["model_listing_authoritative"] = False
     return ZenMuxProfile(
         name="zenmux",
         aliases=("zenmux-ai",),
@@ -368,6 +371,7 @@ def build_profile(config_path: Path = _CONFIG_PATH) -> ProviderProfile:
             "openai/gpt-5.2",
             "deepseek/deepseek-v3.2",
         ),
+        **profile_options,
     )
 
 
