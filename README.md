@@ -1,5 +1,7 @@
 # ZenMux for Hermes Agent
 
+[English](README.md) | [简体中文](README.zh.md)
+
 Use [ZenMux](https://zenmux.ai) models in
 [Hermes Agent](https://github.com/NousResearch/hermes-agent) with browser OAuth.
 The plugin provides:
